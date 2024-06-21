@@ -1,27 +1,50 @@
 {% extends 'base.html' %}
 
-
 {% block title %}Home{% endblock title %}
 
-
 {% block content %}
-    <h1>Sistema Integral de Información de la UTTlax</h1>
-    <h2>SIIUTTlax</h2>
-    <p>Colaboración de Juan👍</p>
-    <p>Colaboración de Dania</p>
-    <p>Caboracion de Miguel Angel</p>
-    <h3>Un trabajo en equipo</h3>
 
-    <div>
-        <nav>
-            <ul>
-                <li>Inicio</li>
-                <li>Carreras</li>
-                <li>Usuarios</li>
-                <li>Semestre</li>
-            </ul>
-        </nav>
-    </div>
+ 
+ 
+       <h1>Sistema Integral de Información de la UTTlax</h1>
+       <h2>SIIUTTlax</h2>
+       {% comment %}
+       <p>Colaboración de Juan👍</p>
+       <p>Colaboración de Dania</p>
+       <p>Caboracion de Miguel Angel</p>
+       <h3>Un trabajo en equipo</h3>
+   
+       <div>
+           <nav>
+               <ul>
+                   <li>Inicio</li>
+                   <li>Carreras</li>
+                   <li>Usuarios</li>
+                   <li>Semestre</li>
+               </ul>
+           </nav>
+       </div>
+ {% endcomment %}
+    
+
+    <table>
+        <thead>
+            <tr>
+                <th>Alumno</th>
+                <th>Profesores</th>
+                <th>Director</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for academia in academia %}
+                <tr>
+                    <td>{{ academia.alumno }}</td>
+                    <td>{{ academia.profesor }}</td>
+                    <td>{{ academia.director }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {% endblock content %}
     
     
