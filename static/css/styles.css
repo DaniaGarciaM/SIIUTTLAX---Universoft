@@ -1,7 +1,26 @@
-:root{
-    --orange-primary: 
+:root {
+    --orange-primary: #FFA601;
+    --orange-secundary: #dd8900;
+    --green-primary: #006a00;
+    --green-secundary: #18CB12;
+    --black: #000000;
+    --text-1: #333333;
+    /*etiqietas*/
+    --text-2: #5c5c5c;
+    /*etquetas*/
+    --bg-1: #F9F7F6;
+    /*background claro*/
+    --bg-2: #efedec;
+    /*semi claro*/
+    --bg-3: #c6c4c3;
+    /*oscuro*/
+
+    /* Fuentes */
+
+    font-family: "Arimo", sans-serif;
+    font-optical-sizing: auto;
 }
 
 body{
-   margin: auto;
+    background-color: var(--bg-2);
 }
