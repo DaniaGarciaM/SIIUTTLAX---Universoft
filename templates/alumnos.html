@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Alumnos{% endblock title %}
+
+{% block content %}
+
+    <title>Tabla de Alumnos</title>
+    <div class="section">
+        <h1 class="center">Tabla de alumnos</h1>
+        <table class="center">
+            <thead>
+                <tr>
+                    <th>Matrícula</th>
+                    <th>Nombre</th>
+                    <th>Carrera</th>
+                    <th>Generación</th>
+                    <th>Cuatrimestre</th>
+                    <th>Grupo</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for alumno in alumnos %}
+                    <tr>
+                        <td>{{ alumno.matricula }}</td>
+                        <td>{{ alumno.nombre }}</td>
+                        <td>{{ alumno.carrera }}</td>
+                        <td>{{ alumno.generacion }}</td>
+                        <td>{{ alumno.cuatrimestre }}</td>
+                        <td>{{ alumno.grupo }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    {% endblock content %}

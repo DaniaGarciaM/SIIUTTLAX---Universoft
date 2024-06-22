@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
 
-{% block title %}
-  Home
-{% endblock %}
-
+{% block title %}Home{% endblock title %}
 {% block content %}
-  <h1>Sistema Integral de Información de la UTTlax</h1>
-  <h2>SIIUTTlax</h2>
-  <p>Colaboración de Juan👍</p>
-  <p>Colaboración de Dania</p>
-  <p>Caboracion de Miguel Angel</p>
-  <h3>Un trabajo en equipo</h3>
+    <h1 class="center">Sistema Integral de Información de la UTTlax</h1>
+    <h2 class="center">SIIUTTlax</h2>
   
-{% endblock %}
+
+<ul>
+    <li><a href="{% url 'alumnos' %}">Tabla de Alumnos</a></li>
+    <li><a href="{% url 'docentes' %}">Tabla de Docentes</a></li>
+    <li><a href="{% url 'directores' %}">Tabla de Directores</a></li>
+</ul>
+
+{% endblock content %}
+
