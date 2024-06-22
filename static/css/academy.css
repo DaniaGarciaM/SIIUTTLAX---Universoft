@@ -3,13 +3,8 @@
 }
 table {
     width: 100%;
-    max-width: 600px;
     border-collapse: collapse;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-   /* float:inline-start;*/
+    margin-bottom: 20px;
 }
 th, td {
     padding: 12px 15px;
@@ -33,4 +28,22 @@ h1 {
 
 h2{
     text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+ul{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
 }
