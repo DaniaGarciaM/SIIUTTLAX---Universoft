@@ -19,8 +19,89 @@
 
     font-family: "Arimo", sans-serif;
     font-optical-sizing: auto;
+
+}
+
+.container{
+    display: flex;
+}
+
+.rigth{
+    width: 100%;
+    margin: 10px;
+    padding:  5px;
+    
 }
 
 body{
     background-color: var(--bg-2);
+    margin: 0;
+    padding: 0;
 }
+
+  .navBar{
+    padding: 5px;
+    width: 80px;
+    height: 100vh;
+    /* border: solid green; */
+    background-color: var(--green-primary);
+
+}
+
+.navBar h2{
+    color: var(--bg-1);
+    padding: 10px;
+    
+}
+
+.text {
+    color: transparent;
+    /* border: solid red; */
+  }
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    
+}
+
+
+
+nav ul li{
+    padding: 10px;
+    /* background-color: #444; */
+    color: white;
+    text-align: center;
+    display: flex;
+    place-items: center;
+    /* justify-content: center; */
+    /* border: solid red; */
+    cursor: pointer;
+}
+
+
+span{
+    align-items: center;
+    padding: 10px;
+}
+
+
+nav:hover{
+    width: 200px;
+    transition: width 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+nav ul li:hover{
+    /* background-color: var(--orange-secundary); */
+    transition: width 0.3s ease-in-out;
+}
+
+.text:hover{
+    color: white;
+}
+
