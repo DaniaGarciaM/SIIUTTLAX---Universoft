@@ -47,8 +47,8 @@ class Career (models.Model):
     short_name = models.CharField(max_length=10)
 
 
-    status_activo = models.BooleanField(status=True)
-    status_inactivo = models.BooleanField(status=False)
+    status_activo = models.BooleanField(True)
+    status_inactivo = models.BooleanField(False)
 
     plan =  models.DateField()
     
