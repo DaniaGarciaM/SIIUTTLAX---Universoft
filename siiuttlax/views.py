@@ -1,5 +1,9 @@
 from django.shortcuts import render
 
+
+def usuarios_view(request):
+    return render(request, 'users/usuarios.html')
+
 def alumnos_view(request):
     context = {
         'alumnos': [
@@ -9,7 +13,7 @@ def alumnos_view(request):
             {'matricula': '20212ITID','nombre': 'Leonel', 'carrera': 'IDGS'},
         ]
     }
-    return render(request, 'alumnos.html', context)
+    return render(request, 'users/alumnos.html', context)
 
 def docentes_view(request):
     context = {
@@ -18,7 +22,7 @@ def docentes_view(request):
             {'nombre': 'Prof. Diana', 'status': 'Activo'},
         ]
     }
-    return render(request, 'docentes.html', context)
+    return render(request, 'users/docentes.html', context)
 
 def directores_view(request):
     context = {
@@ -27,4 +31,4 @@ def directores_view(request):
             {'n_empleado':'2','nombre': 'Laura', 'departamento': 'Recursos Humanos'},
         ]
     }
-    return render(request, 'directores.html', context)
+    return render(request, 'users/directores.html', context)
