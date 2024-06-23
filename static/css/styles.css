@@ -1,107 +1,152 @@
 :root {
-    --orange-primary: #FFA601;
-    --orange-secundary: #dd8900;
-    --green-primary: #006a00;
-    --green-secundary: #18CB12;
-    --black: #000000;
-    --text-1: #333333;
-    /*etiqietas*/
-    --text-2: #5c5c5c;
-    /*etquetas*/
-    --bg-1: #F9F7F6;
-    /*background claro*/
-    --bg-2: #efedec;
-    /*semi claro*/
-    --bg-3: #c6c4c3;
-    /*oscuro*/
+  --orange-primary: #FFA601;
+  --orange-secundary: #dd8900;
+  --green-primary: #006a00;
+  --green-secundary: #18CB12;
+  --black: #000000;
+  --text-1: #333333;
+  /*etiqietas*/
+  --text-2: #5c5c5c;
+  /*etquetas*/
+  --bg-1: #F9F7F6;
+  /*background claro*/
+  --bg-2: #efedec;
+  /*semi claro*/
+  --bg-3: #c6c4c3;
+  /*oscuro*/
 
-    /* Fuentes */
+  /* Fuentes */
 
-    font-family: "Arimo", sans-serif;
-    font-optical-sizing: auto;
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
 
-}
-
-.container{
-    display: flex;
-}
-
-.rigth{
-    width: 100%;
-    margin: 10px;
-    padding:  5px;
-    
-}
-
-body{
-    background-color: var(--bg-2);
-    margin: 0;
-    padding: 0;
-}
-
-  .navBar{
-    padding: 5px;
-    width: 80px;
-    height: 100vh;
-    /* border: solid green; */
-    background-color: var(--green-primary);
+  /* variables de componentes navbar */
+  --border-radius: 10px;
+  --spacer: 1rem;
+  --primary: #406ff3;
+  --text: #6a778e;
+  --link-height: calc(var(--spacer) * 3.5);
+  --timing: 250ms;
 
 }
 
-.navBar h2{
-    color: var(--bg-1);
-    padding: 10px;
-    
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.text {
-    color: transparent;
-    /* border: solid red; */
+body {
+  background-color: var(--bg-2);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  /* border: solid red; */
+}
+
+.rigth {
+  width: 100%;
+  margin: 20px;
+  margin-left: 10px;
+  padding-top: 25px;
+  padding-left: 25px;
+  /* border: solid red; */
+
+}
+
+
+
+.navbar {
+  /* border: solid green; */
+  /* position: fixed; */
+  background-color: var(--green-primary);
+  /* border-radius: 12px; */
+  padding: 1rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.03);
+  /* height: var(--link-height); */
+  height: 100vh;
+  width: calc(var(--spacer) * 5.5);
+  color: var(--bg-2);
+  transition: var(--timing);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar_link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--link-height);
+  width: calc(var(--spacer) * 5.5);
+  color: var(--text);
+  transition: var(--timing);
+  /* border: solid red; */
+  margin: 10px;
+  padding: 5px;
+}
+
+.navbar_link span {
+  position: absolute;
+  left: 100%;
+  transform: translate(calc(-var(--spacer) *3));
+  margin-left: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  color: var(--green-primary);
+  background: #fff;
+  padding: calc(var(--spacer) * 0.75);
+  transition: var(--timing);
+  border-radius: calc(var(--border-radius) * 1.75);
+}
+
+.navbar_link:hover {
+  padding: 1rem;
+  /* color: #006a00; */
+  background-color: var(--orange-secundary);
+  border-radius: var(--border-radius);
+  width: 70px;
+}
+
+.navbar:not(:hover).navbar__ink:focus,
+.navbar_link:hover {
+  span {
+    opacity: 1;
+    transform: translate(0);
   }
-
-nav ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0px;
-    
 }
 
-
-
-nav ul li{
-    padding: 10px;
-    /* background-color: #444; */
-    color: white;
-    text-align: center;
-    display: flex;
-    place-items: center;
-    /* justify-content: center; */
-    /* border: solid red; */
-    cursor: pointer;
+.navbar_menu {
+  position: relative;
 }
 
-
-span{
-    align-items: center;
-    padding: 10px;
+.navbar_item {
+  &:last-child {
+    &:before {
+      content: '';
+      position: absolute;
+      opacity: 0;
+      z-index: -1;
+      top: 0;
+      left: var(--spacer);
+      width: var(--link-height);
+      height: var(--link-height);
+      background: var(--primary);
+      border-radius: calc(var(--border-radius) * 1.75);
+      transition: var(--timing) cubic-bezier(1, 0.2, 0.1, 1.2);
+    }
+  }
 }
 
-
-nav:hover{
-    width: 200px;
-    transition: width 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
+.navbar_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
 }
-
-nav ul li:hover{
-    /* background-color: var(--orange-secundary); */
-    transition: width 0.3s ease-in-out;
-}
-
-.text:hover{
-    color: white;
-}
-
