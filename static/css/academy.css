@@ -38,12 +38,50 @@ h2{
     margin: 20px auto;
     padding: 20px;
     background-color: #ffffff;
+    /* border: solid red; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    border-radius: 12px;
 }
+
+.navUser{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 10px;
+}
+
+.navUser li{
+    height: 50px;
+    width: 200px;
+    background-color: var(--orange-primary);
+    text-align: center;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.navUser li:hover{
+    background-color: var(--orange-secundary);
+}
+
+.navUser a{
+    height: 50px;
+    width: 200px;
+    /* border: solid red; */
+    color: var(--bg-1);
+}
+
 
 ul{
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
+
+li, a{
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+}
+
