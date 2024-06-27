@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <form method="post">
+  <form class="login" method="post">
+    <h2>Bienvendio!!</h2>
+    <h3>Por favor ingresa tu Usuario y contraseña</h3>
     {% csrf_token %}
     {{ form }}
-    <input type="submit" value="Ingresar">
+    <input class="log" type="submit" value="Ingresar">
   </form>
 {% endblock %}
