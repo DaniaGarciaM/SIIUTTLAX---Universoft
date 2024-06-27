@@ -2,8 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Career (models.Model):
-    names = models.CharField(max_length=75)
-
+    name = models.CharField(max_length=100)
     levels = [
         ('TSU','Técnico Superior Universitario'),
         ('ING', 'Ingenieria'),
@@ -12,47 +11,34 @@ class Career (models.Model):
 
     ]
     level = models.CharField(max_length=5, choices=levels)
-
-    short_names = [
-        #TSU
-        ('TIADSM', 'TIADSM'),
-        ('IDGS', 'IDGS'),
-        ('DNAM', 'DNAM'),
-        ('AACH', 'AACH'),
-        ('MAI', 'MAI'),
-        ('TIAIR', 'TIAIR'),
-        ('TIAEVND', 'TIAEVND'),
-        ('PIAP', 'PIAP'),
-        ('PIAM', 'PIAM'),
-        ('PIAA', 'PIAA'),
-        ('MAA', 'MAA'),
-        ('MAR', 'MAR'),
-        ('DMIAP', 'DMIAP'),
-        #LICENCIATURAS
-        ('INM', 'INM'),
-        ('GCH', 'GCH'),
-        #INGENIERÍA
-        ('IRIC', 'IRIC'),
-        ('IEVND', 'IEVND'),
-        ('IT', 'IT'),
-        ('IDGS', 'IDGS'),
-        ('IPOI', 'IPOI'),
-        ('IMI', 'IMI'),
-        ('IDTM', 'IDTM'),
-        #POSGRADO
-        ('IGP', 'IGP')
-    ]
-    
     
     short_name = models.CharField(max_length=10)
 
 
-    status_activo = models.BooleanField(True)
-    status_inactivo = models.BooleanField(False)
+    status = models.BooleanField(True)
 
-    plan =  models.DateField()
+    year_plan =  models.CharField(max_length=4)
+
     
     
     def __str__(self):
         return self.short_name
     
+    class Meta:
+        verbose_name = "Career"
+        verbose_name_plural = "Careers"
+    
+class Subject(models.Model):
+    name = models.CharField(max_length=100)
+    career = models.ForeignKey(Career, on_delete=models.CASCADE)
+    semester = models.IntegerField()
+    total_hours = models.IntegerField()
+    weekly_hours = models.IntegerField()
+    file = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name = "Subject"
+        verbose_name_plural = "Subjects"
