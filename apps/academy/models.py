@@ -30,7 +30,7 @@ class Student(User):
     def __str__(self):
         return self.matricula
     
-    class Meta: #Español
+    class Meta: 
         verbose_name = "Student"
         verbose_name_plural = "Students"
     
