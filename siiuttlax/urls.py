@@ -15,4 +15,5 @@ urlpatterns = [
     path('alumnos/', views.alumnos_view, name='alumnos'),
     path('docentes/', views.docentes_view, name='docentes'),
     path('directores/', views.directores_view, name='directores'),
+    path('accounts/', include('django.contrib.auth.urls')),
 ] 
