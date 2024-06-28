@@ -51,23 +51,20 @@ h2{
 }
 
 .navUser li{
-    height: 50px;
-    width: 200px;
-    background-color: var(--orange-primary);
     text-align: center;
     padding: 15px;
     border-radius: 12px;
     cursor: pointer;
 }
 
-.navUser li:hover{
+.navUser a:hover{
     background-color: var(--orange-secundary);
 }
 
 .navUser a{
-    height: 50px;
-    width: 200px;
-    /* border: solid red; */
+    padding: 12px;
+    background-color: var(--orange-primary);
+    border-radius: 12px;
     color: var(--bg-1);
 }
 

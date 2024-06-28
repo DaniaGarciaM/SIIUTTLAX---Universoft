@@ -4,7 +4,14 @@
 {% block content %}
     <h1 class="center">Sistema Integral de Información de la UTTlax</h1>
     <h2 class="center">SIIUTTlax</h2>
-  
+    <h3>
+      {{user}}
+  </h3>
+
+  <form action="{% url "logout" %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="SALIR">
+  </form>
 
 {% endblock content %}
 
