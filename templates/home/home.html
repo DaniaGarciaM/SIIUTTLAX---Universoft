@@ -1,17 +1,24 @@
 {% extends 'base.html' %}
 
-{% block title %}Home{% endblock title %}
 {% block content %}
-    <h1 class="center">Sistema Integral de Información de la UTTlax</h1>
-    <h2 class="center">SIIUTTlax</h2>
-    <h3>
-      {{user}}
-  </h3>
 
-  <form action="{% url "logout" %}" method="post">
-    {% csrf_token %}
-    <input type="submit" value="SALIR">
-  </form>
 
-{% endblock content %}
 
+{% load static %}
+<div class="containers">
+  <div class="image-containers">
+    <img src="{% static 'img/logo.png' %}" alt="Logo de la Universidad Tecnologica de Tlaxcala" class="imagen-logo">
+  </div>
+
+
+
+<!--
+ <div class="welcome-container">
+    <form action="{% url 'logout' %}" method="post">
+      {% csrf_token %}
+    
+      <input type="submit" value="SALIR">
+    </form>
+  </div>
+  -->
+{% endblock %}
