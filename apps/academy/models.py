@@ -20,7 +20,7 @@ class Professor(User):
     category = models.ForeignKey(
         Category,
         on_delete=models.CASCADE,
-        default=1, verbose_name="Categoría"
+        null=True, blank=True, verbose_name="Categoría"
     )
     
     def __str__(self):
