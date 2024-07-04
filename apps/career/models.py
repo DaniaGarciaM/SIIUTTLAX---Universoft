@@ -25,7 +25,7 @@ class Career (models.Model):
     short_name = models.CharField(max_length=10, verbose_name="Abreviatura")
 
 
-    status = models.BooleanField(True, verbose_name="Status")
+    status = models.BooleanField(default=True, verbose_name="Status")
 
     year_plan =  models.CharField(max_length=4, verbose_name="Año")
 
