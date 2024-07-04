@@ -1,6 +1,6 @@
 from django.db import models
 from apps.academy.models import Professor
-from apps.period.models import semester
+from apps.period.models import Semester
 
 # Create your models here.
 class Career (models.Model):
@@ -42,7 +42,7 @@ class Subject(models.Model):
     name = models.CharField(max_length=100, verbose_name="Materia")
     career = models.ForeignKey(Career, on_delete=models.CASCADE, verbose_name="Carrera")
     semester = models.ForeignKey(
-        semester,
+        Semester,
         on_delete=models.CASCADE,
         default=1,
         verbose_name="Semestre"
