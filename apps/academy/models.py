@@ -1,36 +1,41 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-class Professor(User):
-    no_empleado = models.IntegerField()
-    puesto_id = models.IntegerField()
-    title = models.CharField(max_length=50)
-    
-    def __str__(self):
-        return self.no_empleado
-    
-    class Meta:
-        verbose_name = "Professor"
-        verbose_name_plural = "Professors"
-
 class Category(models.Model):
-    name = models.CharField(max_length=150)
-    short_name = models.CharField(max_length=15)
-    description = models.TextField()
+    category = models.CharField(max_length=150, verbose_name="Categoría")
+    short_name = models.CharField(max_length=15, verbose_name="Abreviatura")
+    description = models.TextField(verbose_name="Descripción")
     
     def __str__(self):
         return self.name
     
     class Meta:
-        verbose_name = "Category"
-        verbose_name_plural = "Categories"
+        verbose_name = "Categoría Profesor"
+        verbose_name_plural = "Categorías Profesores"
+
+class Professor(User):
+    no_empleado = models.IntegerField(verbose_name="No. Empleado")
+    puesto_id = models.IntegerField(verbose_name="")
+    title = models.CharField(max_length=50, verbose_name="Título")
+    category = models.ForeignKey(
+        Category,
+        on_delete=models.CASCADE,
+        null=True, blank=True, verbose_name="Categoría"
+    )
+    
+    def __str__(self):
+        return self.no_empleado
+    
+    class Meta:
+        verbose_name = "Profesor"
+        verbose_name_plural = "Profesores"
 
 class Student(User):
-    matricula = models.CharField(max_length=20)
+    matricula = models.CharField(max_length=20, verbose_name="Matrícula")
     def __str__(self):
         return self.matricula
     
     class Meta: 
-        verbose_name = "Student"
-        verbose_name_plural = "Students"
+        verbose_name = "Estudiante"
+        verbose_name_plural = "Estudiantes"
     
