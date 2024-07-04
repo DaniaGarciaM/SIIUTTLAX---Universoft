@@ -1,0 +1,22 @@
+bodys {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.containers {
+    text-align: center;
+}
+
+.image-containers {
+    display: inline-block;
+}
+
+.image-containers img {
+    max-width: 500px; 
+    height: auto; 
+    border-radius: 10px;
+    text-align: center;
+}
