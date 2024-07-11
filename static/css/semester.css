@@ -43,7 +43,7 @@ h2{
     border-radius: 12px;
 }
 
-.navUser{
+.navUsers{
     display: flex;
     justify-content: space-around;
     margin: 10px;
