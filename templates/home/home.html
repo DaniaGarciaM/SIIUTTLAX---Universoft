@@ -11,11 +11,11 @@
   </div>
 
 
+  {% csrf_token %}
 
 <!--
  <div class="welcome-container">
     <form action="{% url 'logout' %}" method="post">
-      {% csrf_token %}
     
       <input type="submit" value="SALIR">
     </form>
