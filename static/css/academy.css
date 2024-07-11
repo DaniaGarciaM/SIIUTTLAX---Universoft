@@ -50,6 +50,13 @@ h2{
     padding: 10px;
 }
 
+.navUser a{
+    padding: 12px;
+    background-color: var(--orange-primary);
+    border-radius: 12px;
+    color: var(--bg-1);
+}
+
 .navUser li{
     text-align: center;
     padding: 15px;
@@ -61,12 +68,11 @@ h2{
     background-color: var(--orange-secundary);
 }
 
-.navUser a{
-    padding: 12px;
-    background-color: var(--orange-primary);
-    border-radius: 12px;
-    color: var(--bg-1);
-}
+/* .rojo{
+    background-color: red;
+} */
+
+
 
 
 ul{
