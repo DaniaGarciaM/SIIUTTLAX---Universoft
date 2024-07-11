@@ -1,5 +1,3 @@
-
-
 import django.contrib.auth.models
 import django.db.models.deletion
 from django.conf import settings
