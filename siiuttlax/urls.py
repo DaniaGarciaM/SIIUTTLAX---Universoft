@@ -18,5 +18,5 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
 
     #path('inicio/' ,views.inicio_view, name="inicio"),
-    #path('semester/' ,views.semester_view, name="semester"),
+    path('semester/', views.semester_view, name='semestre'),
 ] 
