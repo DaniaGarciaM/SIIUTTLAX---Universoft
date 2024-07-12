@@ -34,3 +34,13 @@ def directores_view(request):
         ]
     }
     return render(request, 'users/directores.html', context)
+
+
+@login_required
+def semester_view(request):
+    context = {
+        'semestre':[
+            {'n_empleado':'2','nombre': 'Laura', 'departamento': 'Recursos Humanos'},
+        ]
+    }
+    return render(request, 'semester/inicio.html', context)
