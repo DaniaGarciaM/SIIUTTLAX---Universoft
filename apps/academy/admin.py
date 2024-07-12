@@ -4,5 +4,11 @@ from django.contrib import admin
 from .models import Student,Category,Professor
 
 admin.site.register(Student)
-admin.site.register(Category)
-admin.site.register(Professor)
+@admin.register(Professor)
+class ProfessorAdmin(admin.ModelAdmin):
+    list_display = ('first_name', 'last_name', 'category', 'no_empleado', 'title')
+    fields = ('first_name', 'last_name', 'category', 'no_empleado', 'title')
+admin.register(Student)
+class ProfessorAdmin(admin.ModelAdmin):
+    list_display = ('first_name', 'last_name', 'enrollment')
+    fields = ('first_name', 'last_name', 'enrollment', 'email')
