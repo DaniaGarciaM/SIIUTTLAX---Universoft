@@ -14,14 +14,13 @@ class Category(models.Model):
         verbose_name_plural = "Categorías Profesores"
 
 class Professor(User):
-    no_empleado = models.IntegerField(verbose_name="No. Empleado")
-    puesto_id = models.IntegerField(verbose_name="")
     title = models.CharField(max_length=50, verbose_name="Título")
     category = models.ForeignKey(
         Category,
         on_delete=models.CASCADE,
         null=True, blank=True, verbose_name="Categoría"
     )
+    employee_number = models.CharField(max_length=5, verbose_name="No. Empleado", default="0000")
     
     def __str__(self):
         return self.no_empleado
