@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'apps.academy.apps.AcademyConfig',
     'apps.career.apps.CareerConfig',
     'apps.period.apps.PeriodConfig',
+    'apps.group.apps.GroupConfig',
     'apps.userprofile.apps.UserprofileConfig'
 ]
 
