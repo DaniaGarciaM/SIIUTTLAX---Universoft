@@ -13,14 +13,16 @@ def create_professor(request):
             category = form.cleaned_data['category']
             employee_number = form.cleaned_data['employee_number']
 
-            Professor.objects.create(
+            
+
+            Professor.objects.create_user(
                 username = username,
                 first_name = first_name,
                 password = password,
                 category = category,
                 employee_number = employee_number
             )
-            return redirect('academy:professors_create')
+            return redirect('academy:create_professor')
     form = ProfessorForm()    
     return render(request,
                   'academy/create_professor.html',
@@ -34,15 +36,15 @@ def create_student(request):
             username = form.cleaned_data['username']
             first_name = form.cleaned_data['first_name']
             password = form.cleaned_data['password']
-            matricula = form.cleaned_data['employee_number']
+            matricula = form.cleaned_data['matricula']
 
-            Professor.objects.create(
+            Student.objects.create_user(
                 username = username,
                 first_name = first_name,
                 password = password,
                 matricula = matricula
             )
-            return redirect('academy:student_create')
+            return redirect('academy:create_student')
     form = ProfessorForm()    
     form = StudentForm()
     return render(request,
