@@ -12,5 +12,3 @@ class ProfessorAdmin(admin.ModelAdmin):
 class ProfessorAdmin(admin.ModelAdmin):
     list_display = ('first_name', 'last_name', 'matricula')
     fields = ('first_name', 'last_name', 'matricula', 'email')
-
-
