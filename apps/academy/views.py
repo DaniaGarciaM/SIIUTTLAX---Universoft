@@ -5,7 +5,7 @@ from .forms import ProfessorForm, StudentForm
 def create_professor(request):
     form = ProfessorForm()
     return render(request,
-                  'academy/create_prof.html',
+                  'academy/create_professor.html',
                   {'form': form})
 
 def create_student(request):
