@@ -50,7 +50,10 @@ class Subject(models.Model):
     )
     total_hours = models.IntegerField(verbose_name="Horas totales")
     weekly_hours = models.IntegerField(verbose_name="Horas semanales")
-    file = models.CharField(max_length=100, verbose_name="Hoja de asignatura")
+    file = models.FileField(
+            verbose_name='Archivo',
+            blank=True, null= True,
+            upload_to='asignaturas/')
 
     def __str__(self):
         return self.name
