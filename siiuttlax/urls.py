@@ -16,6 +16,7 @@ urlpatterns = [
     path('docentes/', views.docentes_view, name='docentes'),
     path('directores/', views.directores_view, name='directores'),
     path('accounts/', include('django.contrib.auth.urls')),
+    
 
     #path('inicio/' ,views.inicio_view, name="inicio"),
     path('semester/', views.semester_view, name='semestre'),
