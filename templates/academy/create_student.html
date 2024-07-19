@@ -1,6 +1,18 @@
+{% extends 'base.html' %}
 
-<form method="post">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Guardar">
-</form>
+<title>
+  {% block title %}
+    Registro Alumno
+  {% endblock %}
+</title>
+
+{% block content %}
+<div class="container">
+    <form class="registro" method="post">
+        <h2 class="registro_profesor">Registrate por favor Estudiante!</h2>
+      {% csrf_token %}
+      {{ form }}
+      <input class='log'type="submit" value="Guardar" />
+    </form>
+</div>
+{% endblock %}
