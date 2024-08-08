@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from .forms import ProfessorForm, StudentForm
 from .models import Professor, Student
+from django.contrib import messages
 # Create your views here.
 def create_professor(request):
     if request.method == 'POST':
@@ -22,6 +23,7 @@ def create_professor(request):
                 category = category,
                 employee_number = employee_number
             )
+            # messages.add_message(request,'Se a creado con exito!')
             return redirect('home:home')
     form = ProfessorForm()    
     return render(request,
