@@ -35,8 +35,8 @@ class Career (models.Model):
         return self.short_name
     
     class Meta:
-        verbose_name = "Career"
-        verbose_name_plural = "Careers"
+        verbose_name = "Carrera"
+        verbose_name_plural = "Carreras"
     
 class Subject(models.Model):
     name = models.CharField(max_length=100, verbose_name="Materia")
@@ -59,5 +59,5 @@ class Subject(models.Model):
         return self.name
     
     class Meta:
-        verbose_name = "Subject"
-        verbose_name_plural = "Subjects"
+        verbose_name = "Materia"
+        verbose_name_plural = "Materias"
