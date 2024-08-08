@@ -22,7 +22,7 @@ def create_professor(request):
                 category = category,
                 employee_number = employee_number
             )
-            return redirect('academy:create_professor')
+            return redirect('home:home')
     form = ProfessorForm()    
     return render(request,
                   'academy/create_professor.html',
@@ -44,7 +44,8 @@ def create_student(request):
                 password = password,
                 matricula = matricula
             )
-            return redirect('academy:create_student')
+            # return redirect('academy:create_student')
+            return redirect('home:home')
     form = ProfessorForm()    
     form = StudentForm()
     return render(request,
