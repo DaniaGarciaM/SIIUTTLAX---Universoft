@@ -30,6 +30,7 @@ class Professor(User):
         verbose_name_plural = "Profesores"
 
 class Student(User):
+    
     matricula = models.CharField(max_length=20, verbose_name="Matrícula")
     def __str__(self):
         return f"{self.matricula} | {self.first_name} {self.last_name}"
