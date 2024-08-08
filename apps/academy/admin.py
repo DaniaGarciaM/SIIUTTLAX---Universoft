@@ -9,6 +9,6 @@ class ProfessorAdmin(admin.ModelAdmin):
     list_display = ('first_name', 'last_name', 'category', 'employee_number', 'title')
     fields = ('first_name', 'last_name', 'category', 'employee_number', 'title')
 @admin.register(Student)
-class ProfessorAdmin(admin.ModelAdmin):
+class StudentAdmin(admin.ModelAdmin):
     list_display = ('first_name', 'last_name', 'matricula')
     fields = ('first_name', 'last_name', 'matricula', 'email')
