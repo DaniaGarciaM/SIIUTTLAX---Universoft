@@ -13,5 +13,9 @@
     {% csrf_token %}
     {{ form }}
     <input class="log" type="submit" value="Ingresar">
+    <div class="create">
+      <a href="{% url 'academy:create_student' %}">Nuevo Estudiante</a>
+      <a href="{% url 'academy:create_professor' %}">Nuevo Profesor</a>
+    </div>
   </form>
 {% endblock %}

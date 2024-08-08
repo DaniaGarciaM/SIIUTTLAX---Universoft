@@ -88,3 +88,50 @@ li, a{
     font-weight: 700;
 }
 
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.registro{
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 70px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.registro h2{
+    text-align: center;
+    color: #333;
+  }
+
+  .helptext{
+    font-weight: 700;
+    color:#333;
+  }
+
+  .registro input, .registro select, .registro textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .registro .log {
+    display: block;
+    width: 30%;
+    padding: 10px;
+    background-color: #006a00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin: 20px auto 0; 
+  }
