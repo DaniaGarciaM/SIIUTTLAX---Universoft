@@ -23,7 +23,7 @@ class Professor(User):
     employee_number = models.CharField(max_length=5, verbose_name="No. Empleado", default="0000")
     
     def __str__(self):
-        return self.employee_number
+        return f"{self.employee_number} | {self.first_name} {self.last_name}"   
     
     class Meta:
         verbose_name = "Profesor"
