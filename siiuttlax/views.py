@@ -44,3 +44,14 @@ def semester_view(request):
         ]
     }
     return render(request, 'semester/inicio.html', context)
+
+def inicio_view(request):
+    context = {
+        'group':[
+        {'semester_id': 1, 'semester': 1, 'semester_name': 'Primer Cuatrimestre'},
+        {'semester_id': 2, 'semester': 2, 'semester_name': 'Segundo Cuatrimestre'},
+        {'semester_id': 3, 'semester': 3, 'semester_name': 'Tercer Cuatrimestre'},
+        ]
+    }
+    
+    return render(request, 'semester/inicio.html', context)

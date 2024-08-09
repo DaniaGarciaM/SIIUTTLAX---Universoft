@@ -6,11 +6,33 @@
 
 {% block content %}
 
-    <ul class="navUser">
-        <li><a href="{% url 'semestre' %}">Tabla de Semestres</a></li>
-    </ul>    
-    
 {% block tables %}
+<title>Tabla de Cuatrimestres</title>
+<div class="section">
+    <h1 class="center">Tabla de Cuatrimestres</h1>
+    <table class="center">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Semestre</th>
+                <th>Nombre del Cuatrimestre</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for group in group %}
+                <tr>
+                    <td>{{ group.semester_id }}</td>
+                    <td>{{ group.semester }}</td>
+                    <td>{{ group.semester_name }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="3">No hay datos disponibles.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
 
 {% endblock tables %}
 
