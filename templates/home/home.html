@@ -6,12 +6,17 @@
 {% block content %}
 
 
+{% if user.is_authenticated %}
+  
+{% endif %}
+
   
 
 {% load static %}
 <div class="containers">
   <div class="image-containers">
     <img src="{% static 'img/logo.png' %}" alt="Logo de la Universidad Tecnologica de Tlaxcala" class="imagen-logo">
+    {% comment %} <button  id="guardarAlumno" onclick="alertaModal()">hola</button> {% endcomment %}
   </div>
 
 
