@@ -10,6 +10,7 @@
         <h3>Alumnos:</h3>
         {% for student in group.students.all %}
         <li>{{ student }}</li>
+        {% endfor %}
     </ul>
 
     <form action="{% url 'logout'%}" method="post">
