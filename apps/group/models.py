@@ -23,6 +23,7 @@ class Group (models.Model):
         blank=True,
         verbose_name="Periodo"
     )
+    subjects = models.ManyToManyField(Subject, verbose_name="Materias")
     career = models.ForeignKey(
         Career,
         on_delete=models.CASCADE,
@@ -39,7 +40,7 @@ class Group (models.Model):
     )
     students = models.ManyToManyField(
         Student,
-        verbose_name="Student"
+        verbose_name="Estudiantes"
         
     )
 
