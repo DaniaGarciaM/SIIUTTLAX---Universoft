@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Bienenvido {{ student }}</h1>
+    <p>Carrera: {{ carrer }}</p>
+    <p>Grupo:{{ group.group  }}</p>
+    <p>Cuatrimestre: {{ group.semester }}</p>
+
+    <p>tutor: {{ group.tutor }}</p>
+
+    <form action="{% url 'logout'%}" method="post">
+        {% csrf_token %} 
+        <input type="submit" value="Salir">
+    </form>
+{% endblock %}
+    
