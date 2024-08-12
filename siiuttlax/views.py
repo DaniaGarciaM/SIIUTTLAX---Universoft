@@ -20,7 +20,7 @@ def alumnos_view(request):
 def docentes_view(request):
     context = {
         'docentes': [
-            {'nombre': 'Prof. Paco', 'status': 'Activio'},
+            {'nombre': 'Prof. Paco', 'status': 'Activo'},
             {'nombre': 'Prof. Diana', 'status': 'Activo'},
         ]
     }
