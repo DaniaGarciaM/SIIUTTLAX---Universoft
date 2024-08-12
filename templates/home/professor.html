@@ -1,20 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
+  <div class="infoProfessor">
     <h1>Bienenvido {{ professor }}</h1>
     <p>Carrera: {{ carrer }}</p>
-    <p>Grupo:{{ group.group  }}</p>
+    <p>Grupo:{{ group.group }}</p>
     <p>Cuatrimestre: {{ group.semester }}</p>
 
     <ul>
-        <h3>Alumnos:</h3>
-        {% for student in group.students.all %}
+      <h3>Alumnos:</h3>
+      {% for student in group.students.all %}
         <li>{{ student }}</li>
         {% endfor %}
     </ul>
 
-    <form action="{% url 'logout'%}" method="post">
-        {% csrf_token %} 
-        <input type="submit" value="Salir">
+    <form action="{% url 'logout' %}" method="post">
+      {% csrf_token %}
+      <input type="submit" value="Salir" />
     </form>
+  </div>
 {% endblock %}
