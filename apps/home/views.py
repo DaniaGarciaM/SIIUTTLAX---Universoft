@@ -49,7 +49,7 @@ def student(request):
     }
     
     return render(request, 'home/student.html', context)
-# hola mundo
+
 def professor(request):
     user = request.user
     professor = user.professor
